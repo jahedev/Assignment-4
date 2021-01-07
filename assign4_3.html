@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DOM Challenges II</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #3f2d46;
+        font-family: Arial, Helvetica, sans-serif;
+        color: white;
+      }
+
+      #container {
+        margin: auto;
+        padding: 20px;
+        max-width: 400px;
+      }
+
+      .form-wrap {
+        background: #edebf4;
+        padding: 20px;
+        color: #333;
+        border-radius: 10px;
+      }
+
+      .form-wrap h1,
+      .form-wrap p {
+        text-align: center;
+      }
+
+      .form-wrap .form-group {
+        margin-bottom: 20px;
+      }
+
+      .form-wrap .form-group label {
+        display: block;
+      }
+
+      .form-wrap .form-group input {
+        margin-top: 10px;
+        display: block;
+        height: 2.4em;
+        width: 100%;
+        font-size: large;
+        padding: 10px;
+        border-radius: 10px;
+        border: #333 1px solid;
+        outline: none;
+      }
+
+      .form-wrap button {
+        background: #8e44ad;
+        color: white;
+        font-size: large;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 7px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      h3 {
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div class="form-wrap">
+        <h1>Sign Up</h1>
+        <form>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="username" name="username" id="username" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" />
+          </div>
+          <div class="form-group">
+            <label for="password1">Password</label>
+            <input type="password" name="password1" id="password1" />
+          </div>
+          <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input type="password" name="pasword2" id="password2" />
+          </div>
+          <button type="button" class="btn">Sign Up</button>
+        </form>
+      </div>
+      <h3></h3>
+    </div>
+    <script>
+      document
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", function (event) {
+          let psw1 = Number(document.getElementsByTagName("input")[2].value);
+          let psw2 = Number(document.getElementsByTagName("input")[3].value);
+
+          //   let inpArr = document.getElementsByTagName("input");
+
+          //   if (fieldsEmpty(inpArr))
+          //     document.getElementsByTagName("h3")[0].innerHTML =
+          //       "Please fill out all the fields";
+          //   // else {
+          //   //   if (validateEmail(document.getElementById("email") === false))
+          //   //     document.getElementsByTagName("h3")[0].innerHTML =
+          //   //       "Please enter a valid e-mail";
+          if (psw1 != psw2)
+            document.getElementsByTagName("h3")[0].innerHTML =
+              "Passwords don't match";
+          else if (psw1 != 12345678) alert("Incorrect Password");
+          else
+            document.getElementsByTagName("h3")[0].innerHTML =
+              "Information Correct";
+          //   // }
+          // });
+
+          // function validateEmail(email) {
+          //   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          //   return re.test(String(email).toLowerCase());
+          // }
+
+          // function fieldsEmpty(arr) {
+          //   let result = false;
+          //   for (x in arr) {
+          //     if (x.value == "") return true;
+          //   }
+          //   return result;
+        });
+    </script>
+  </body>
+</html>
