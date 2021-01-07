@@ -13,6 +13,11 @@
             <div id="element1">
                 <h1>Don't hover over me</h1>
              </div>
-             <script type="text/javascript" src="script.js"></script>
+             <script type="text/javascript">
+
+        document.getElementById('element1').addEventListener("click", function(event){
+            alert('Hello')
+        })
+            </script>
 </body>
 </html>
