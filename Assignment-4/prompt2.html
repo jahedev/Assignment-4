@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Prompt2</title>
+  </head>
 
+  <style>
+    body {
+      background-color: powderblue;
+    }
+    h1 {
+      color: blue;
+    }
 
+    button {
+      color: gold;
+    }
+  </style>
 
-</head>
-
-
-
-<body>
-
-
+  <body>
     <button id="hoverButton">DON'T HOVER OVER ME!</button>
 
-<script>
+    <script>
+      document
+        .getElementById("hoverButton")
+        .addEventListener("mouseover", function (event) {
+          alert("Hey, I told you not to hover over me!");
+        });
+    </script>
 
-    document.getElementById("hoverButton").addEventListener("mouseover",
-     function(event) {alert("Hey, I told you not to hover over me!")})
-
-      </script>
-
-<!--
+    <!--
     // put the script right here instead of another file
     // it is alittle easier
 
@@ -33,17 +40,10 @@
 
     // should script be at the end of the file?
 
+    // make buttons bigger
+
 
 
 -->
-
-
-
-</body>
-
-
-
-
-
-
+  </body>
 </html>
