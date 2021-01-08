@@ -94,10 +94,53 @@
             <label for="password2">Confirm Password</label>
             <input type="password" name="pasword2" id="password2" />
           </div>
-          <button type="submit" class="btn">Sign Up</button>
+          <button type="button" class="btn">Sign Up</button>
         </form>
       </div>
-      <h3>*Use JS to Update This When Button is Clicked*</h3>
+      <h3> </h3>
     </div>
+        <script>
+      document
+        .getElementsByTagName("button")[0]
+        .addEventListener("click", function (event) {
+          let psw1 = Number(document.getElementsByTagName("input")[2].value);
+          let psw2 = Number(document.getElementsByTagName("input")[3].value);
+
+          //tried to add other useful functions like validating email address but not working
+          //   let inpArr = document.getElementsByTagName("input");
+
+          //   if (fieldsEmpty(inpArr))
+          //     document.getElementsByTagName("h3")[0].innerHTML =
+          //       "Please fill out all the fields";
+          //   // else {
+          //   //   if (validateEmail(document.getElementById("email") === false))
+          //   //     document.getElementsByTagName("h3")[0].innerHTML =
+          //   //       "Please enter a valid e-mail";
+
+          //checking if passwords match
+          if (psw1 != psw2)
+            document.getElementsByTagName("h3")[0].innerHTML =
+              "Passwords don't match";
+          //validate password
+          else if (psw1 != 12345678) alert("Incorrect Password");
+          else
+            document.getElementsByTagName("h3")[0].innerHTML =
+              "Information Correct";
+          //   // }
+          // });
+
+          // function validateEmail(email) {
+          //   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+          //   return re.test(String(email).toLowerCase());
+          // }
+
+          // function fieldsEmpty(arr) {
+          //   let result = false;
+          //   for (x in arr) {
+          //     if (x.value == "") return true;
+          //   }
+          //   return result;
+        });
+    </script>
   </body>
 </html>
