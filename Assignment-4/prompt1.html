@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prompt1</title>
+  </head>
+
+  <style>
+    body {
+      background-color: powderblue;
+    }
+    h1 {
+      color: blue;
+    }
+
+    button {
+      color: red;
+    }
+  </style>
+
+  <!--
+
+        // to style things with CSS and make them look nice
+
+        // we make style tags
+
+        // then we alter the attributes using the ID names and a hashtag
+
+        // find out how to center
 
 
+// prettier seems to mess up copy ans pasting
 
-</head>
+-->
 
-
-
-<body>
-
+  <body>
     <h1 id="id1">Which is the "Right" button?</h1>
 
     <h1 id="id2">Find Out!</h1>
 
+    <button
+      type="button"
+      onclick="document.getElementById('id2').innerText = 'I am Right!'"
+    >
+      It Is Me!
+    </button>
 
+    <button
+      type="button"
+      id="myButton2"
+      onclick="document.getElementById('id2').innerText = 'No, I am Right!'"
+    >
+      No, It Is Me!
+    </button>
 
-    <button type="button"
-onclick="document.getElementById('id2').innerText = 'I am Right!'">
-It Is Me!</button>
-
-
-
-
-
-<button type="button"  id="myButton2"
-onclick="document.getElementById('id2').innerText = 'No, I am Right!'">
-No, It Is Me!
-
-
-</button>
-
-<!--This is a comment. Comments are not displayed in the browser
+    <!--This is a comment. Comments are not displayed in the browser
 
 the 2 buttons have text above them
 when you press one the text changes
@@ -44,16 +64,13 @@ when you press one the text changes
 
 // see how to center the text and the buttons
 
+// <script src="script.js"></script>
+
+// does not seem to need this
 
 
+// prettier seems to mess up copy ans pasting
 
 -->
-
-</body>
-
-
-<script src="script.js"></script>
-
-
-
+  </body>
 </html>
