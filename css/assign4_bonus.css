@@ -1,0 +1,18 @@
+/* override */
+body {
+  background-color: #194663;
+}
+
+.form-wrap {
+  background-color: #f0f7ff;
+}
+
+.form-wrap button {
+  background-color: #2980b9;
+  outline: none;
+}
+
+.form-wrap button:hover {
+  background-color: #3498db;
+  transition: all 0.2s;
+}

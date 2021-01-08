@@ -5,78 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>DOM Challenges II</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        background: #3f2d46;
-        font-family: Arial, Helvetica, sans-serif;
-        color: white;
-      }
-
-      #container {
-        margin: auto;
-        padding: 20px;
-        max-width: 400px;
-      }
-
-      .form-wrap {
-        background: #edebf4;
-        padding: 20px;
-        color: #333;
-        border-radius: 10px;
-      }
-
-      .form-wrap h1,
-      .form-wrap p {
-        text-align: center;
-      }
-
-      .form-wrap .form-group {
-        margin-bottom: 20px;
-      }
-
-      .form-wrap .form-group label {
-        display: block;
-      }
-
-      .form-wrap .form-group input {
-        margin-top: 10px;
-        margin-bottom: 6px;
-        display: block;
-        height: 2.4em;
-        width: 100%;
-        font-size: large;
-        padding: 10px;
-        border-radius: 10px;
-        border: #333 1px solid;
-        outline: none;
-      }
-
-      .form-wrap button {
-        background: #8e44ad;
-        color: white;
-        font-size: large;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 7px;
-        cursor: pointer;
-        width: 100%;
-        margin-top: 10px;
-      }
-
-      h3 {
-        margin-top: 20px;
-      }
-
-      span {
-        color: crimson;
-      }
-    </style>
+    <link rel="stylesheet" href="css/assign4_3.css" />
   </head>
   <body>
     <div id="container">
@@ -108,53 +37,6 @@
       </div>
       <h3></h3>
     </div>
-    <script>
-      const username = document.getElementById('username');
-      const email = document.getElementById('email');
-      const password1 = document.getElementById('password1');
-      const password2 = document.getElementById('password2');
-
-      const errorUsername = document.getElementById('error-username');
-      const errorEmail = document.getElementById('error-email');
-      const errorPassword1 = document.getElementById('error-password1');
-      const errorPassword2 = document.getElementById('error-password2');
-
-      const submit = document.querySelector('button');
-
-      submit.addEventListener('click', function (event) {
-        let noError = true;
-
-        // Validate Username
-        if (username.value === '') {
-          errorUsername.innerHTML = 'Enter a valid username';
-          noError = false;
-        } else errorUsername.innerHTML = '';
-
-        // Validate Email
-        if (!validateEmail(email.value)) {
-          errorEmail.innerHTML = 'Email is invalid';
-          noError = false;
-        } else errorEmail.innerHTML = '';
-
-        // Validate Password1
-        if (password1.value != '123456789') {
-          errorPassword1.innerHTML = 'Wrong password';
-          noError = false;
-        } else errorPassword1.innerHTML = '';
-
-        // Validate Password2
-        if (password1.value !== password2.value) {
-          errorPassword2.innerHTML = 'Passwords do not match';
-          noError = false;
-        } else errorPassword2.innerHTML = '';
-
-        if (noError) alert('Open Sesame: You may enter');
-      });
-
-      function validateEmail(email) {
-        const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-      }
-    </script>
+    <script src="js/assign4_3.js"></script>
   </body>
 </html>
