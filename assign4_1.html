@@ -16,7 +16,6 @@
         align-items: center;
         justify-content: center;
         text-align: center;
-        flex-direction: row-reverse;
       }
 
       .row p {
@@ -48,8 +47,8 @@
     <div class="container">
       <h1>Who is right?</h1>
       <div class="row">
-        <button>Click Me 1</button>
-        <button>Click Me 2</button>
+        <button>Ooo Click Me</button>
+        <button>No, Click Me</button>
       </div>
       <div class="row">
         <p>*C'mon click me*</p>
@@ -67,7 +66,7 @@
         .getElementsByTagName('button')[1]
         .addEventListener('click', function (event) {
           document.getElementsByClassName('row')[1].innerHTML =
-            " <p>*C'mon click me*</p><p>No, I'm righ!</p>";
+            " <p>*C'mon click me*</p><p>No, I'm right!</p>";
         });
     </script>
   </body>
